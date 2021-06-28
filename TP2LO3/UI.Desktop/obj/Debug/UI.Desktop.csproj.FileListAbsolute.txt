@@ -1,0 +1,5 @@
+C:\Net\Unidad02\TP2LO3\UI.Desktop\obj\Debug\UI.Desktop.csproj.AssemblyReference.cache
+C:\Net\Unidad02\TP2LO3\UI.Desktop\obj\Debug\UI.Desktop.Form1.resources
+C:\Net\Unidad02\TP2LO3\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+C:\Net\Unidad02\TP2LO3\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.cache
+C:\Net\Unidad02\TP2LO3\UI.Desktop\obj\Debug\UI.Desktop.csproj.CoreCompileInputs.cache
