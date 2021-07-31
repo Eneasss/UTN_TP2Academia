@@ -37,7 +37,7 @@ namespace Data.Database
         {
             get { return _sqlConn}
         }*/
-        public SqlConnection Sqlconn { get; set; }
-        SqlConnection sqlConn = new SqlConnection();
+        public SqlConnection sqlConn { get; set; }
+        //SqlConnection sqlConn = new SqlConnection();
     }
 }

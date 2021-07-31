@@ -67,7 +67,7 @@ namespace Data.Database
 
             this.OpenConnection();
 
-            SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios", Sqlconn);
+            SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios", this.sqlConn);
 
             SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
 
