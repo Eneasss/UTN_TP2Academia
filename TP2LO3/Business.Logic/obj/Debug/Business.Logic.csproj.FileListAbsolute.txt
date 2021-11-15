@@ -1,2 +1,0 @@
-C:\Net\Unidad02\TP2LO3\Business.Logic\obj\Debug\Business.Logic.csproj.AssemblyReference.cache
-C:\Net\Unidad02\TP2LO3\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
