@@ -51,7 +51,8 @@ namespace Business.Logic
             CursoLogic cl = new CursoLogic();
             if (cl.GetOne(id).Cupo==0)
             {
-                throw new ArgumentNullException();
+                Exception ExcepcionManejada = new Exception("Error al recuperar los cursos.");
+                throw ExcepcionManejada;
             }
             return true;
         }
