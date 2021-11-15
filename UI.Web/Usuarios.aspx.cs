@@ -384,7 +384,7 @@ namespace UI.Web
 									{
 										if ( ddlTipo.SelectedIndex ==0 || ddlTipo.SelectedIndex ==1 || ddlTipo.SelectedIndex==2)
 										{
-											if (Validaciones.esCampoValido(txtLegajo.Text))
+											if (Validaciones.esCampoValido(txtLegajo.Text) && Validaciones.esNumeroValido(txtLegajo.Text))
 											{
 												return true;
 											}

@@ -232,9 +232,9 @@ namespace UI.Web
 
 			if (Validaciones.esCampoValido(txtDescripcion.Text))
 			{
-				if (Validaciones.esCampoValido(txtHSSemanales.Text))
+				if (Validaciones.esCampoValido(txtHSSemanales.Text) && Validaciones.esNumeroValido(txtHSSemanales.Text)) 
 				{
-					if (Validaciones.esCampoValido(txtHSTotales.Text))
+					if (Validaciones.esCampoValido(txtHSTotales.Text) && Validaciones.esNumeroValido(txtHSTotales.Text))
 					{
 						return true;
 					}

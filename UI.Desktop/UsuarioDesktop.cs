@@ -321,7 +321,7 @@ namespace UI.Desktop
                                     {
                                         if (cbTipo.SelectedIndex==0 || cbTipo.SelectedIndex==1 || cbTipo.SelectedIndex==2)
                                         {
-                                            if (Validaciones.esCampoValido(txtLegajo.Text))
+                                            if (Validaciones.esCampoValido(txtLegajo.Text) && Validaciones.esNumeroValido(txtLegajo.Text))
                                             {
                                                 return true;
                                             }

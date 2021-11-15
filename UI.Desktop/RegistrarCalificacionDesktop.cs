@@ -65,9 +65,17 @@ namespace UI.Desktop
 
             if (Validaciones.esCampoValido(txtCondicion.Text))
             {
-                if (Validaciones.esCampoValido(txtNota.Text))
+                if (Validaciones.esCampoValido(txtNota.Text)  && Validaciones.esNumeroValido(txtNota.Text))
                 {
-                    return true;
+                    if (Validaciones.esNotaValida(txtNota.Text))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Notificar("Error", "Ingrese nota de 0 a 10", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
                 }
                 else
                 {

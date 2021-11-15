@@ -160,10 +160,11 @@ namespace UI.Desktop
         }
         public override bool Validar()
         {
-            if (Validaciones.esCampoValido(txtCupo.Text))
+            if (Validaciones.esCampoValido(txtCupo.Text) && Validaciones.esNumeroValido(txtCupo.Text))
             {
-                if (Validaciones.esCampoValido(txtCalendario.Text))
+                if (Validaciones.esCampoValido(txtCalendario.Text) && Validaciones.esNumeroValido(txtCalendario.Text))
                 {
+
                     if (cbMateria.SelectedValue != null)
                     {
                         if (cbComision.SelectedValue != null)

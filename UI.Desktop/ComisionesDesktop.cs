@@ -139,7 +139,7 @@ namespace UI.Desktop
 
             if (Validaciones.esCampoValido(txtDesc.Text))
             {
-                if (Validaciones.esCampoValido(txtAnioEsp.Text))
+                if (Validaciones.esCampoValido(txtAnioEsp.Text) && Validaciones.esNumeroValido(txtAnioEsp.Text))
                 {
                     return true;
                 }

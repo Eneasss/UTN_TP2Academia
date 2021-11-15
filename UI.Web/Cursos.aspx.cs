@@ -315,9 +315,9 @@ namespace UI.Web
 		public bool Validar()
 		{
 
-			if (Validaciones.esCampoValido(txtAnioCalendario.Text))
+			if (Validaciones.esCampoValido(txtAnioCalendario.Text) && Validaciones.esNumeroValido(txtAnioCalendario.Text))
 			{
-				if (Validaciones.esCampoValido(txtCupo.Text))
+				if (Validaciones.esCampoValido(txtCupo.Text) && Validaciones.esNumeroValido(txtCupo.Text))
 				{
                     if (ddlComision.SelectedValue != null)
                     {

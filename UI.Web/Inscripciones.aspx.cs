@@ -86,12 +86,29 @@ namespace UI.Web
 
         private void ListarInscripcion()
         {
+            InscripcionLogic il = new InscripcionLogic();
             MateriaLogic ml = new MateriaLogic();
             CursoLogic cl = new CursoLogic();
             ComisionLogic col = new ComisionLogic();
             List<CursoComisionMateria> inscripciones = new List<CursoComisionMateria>();
             foreach (Curso c in cl.GetAllxPlan(personaActual.IDPlan, personaActual.ID))
             {
+                foreach (AlumnoInscripcion ai in il.GetAllxIdPersona(personaActual.ID))
+                {
+                    if (cl.GetOne(ai.IDCurso).IDMateria != c.IDMateria)
+                    {
+                        CursoComisionMateria curso = new CursoComisionMateria();
+                        curso.ID = c.ID;
+                        //curso.IDComision = c.IDComision;
+                        curso.DescripcionComisiones = col.GetOne(c.IDComision).Descripcion;
+                        curso.DescripcionMateria = ml.GetOne(c.IDMateria).Descripcion;
+                        curso.AnioCalendario = c.AnioCalendario;
+                        curso.Cupo = c.Cupo;
+                        inscripciones.Add(curso);
+                    }
+
+                }
+                /*
                 CursoComisionMateria curso = new CursoComisionMateria();
                 curso.ID = c.ID;
                 curso.DescripcionComisiones = col.GetOne(c.IDComision).Descripcion;
@@ -99,6 +116,7 @@ namespace UI.Web
                 curso.AnioCalendario = c.AnioCalendario;
                 curso.Cupo = c.Cupo;
                 inscripciones.Add(curso);
+                */
             }
             gridViewInscripcion.DataSource = inscripciones;
             gridViewInscripcion.DataBind();

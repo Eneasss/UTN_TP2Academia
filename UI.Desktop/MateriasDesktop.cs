@@ -144,16 +144,31 @@ namespace UI.Desktop
         {
 
 
-            if (string.IsNullOrEmpty(txtDesc.Text))
+
+            if (Validaciones.esCampoValido(txtDesc.Text))
             {
-
-                this.Notificar("Error", "Descripcion incompleto", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
-
+                if (Validaciones.esCampoValido(txtHSS.Text) && Validaciones.esNumeroValido(txtHSS.Text))
+                {
+                    if (Validaciones.esCampoValido(txtHST.Text) && Validaciones.esNumeroValido(txtHST.Text))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        this.Notificar("Error", "Horas totales invalido", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                else
+                {
+                    this.Notificar("Error", "Horas semanales invalido", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             else
             {
-                return true;
+                this.Notificar("Error", "Descripcion incompleto", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return false;
             }
 
 

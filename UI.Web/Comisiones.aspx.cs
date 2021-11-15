@@ -222,7 +222,7 @@ namespace UI.Web
 
 			if (Validaciones.esCampoValido(txtDescripcion.Text))
 			{
-				if (Validaciones.esCampoValido(txtAnioEspecialidad.Text))
+				if (Validaciones.esCampoValido(txtAnioEspecialidad.Text) && Validaciones.esNumeroValido(txtAnioEspecialidad.Text))
 				{
 					return true;
 				}

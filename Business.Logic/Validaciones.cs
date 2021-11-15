@@ -49,12 +49,44 @@ namespace Business.Logic
         public static bool CuposValidos(int id)
         {
             CursoLogic cl = new CursoLogic();
-            if (cl.GetOne(id).Cupo==0)
+            if (cl.GetOne(id).Cupo == 0)
             {
                 Exception ExcepcionManejada = new Exception("Error al recuperar los cursos.");
                 throw ExcepcionManejada;
             }
             return true;
+        }
+
+        public static Boolean esNumeroValido(string numero)
+        {
+            if (Regex.IsMatch(numero, @"^[0-9]+$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static Boolean esNotaValida(string nota)
+        {
+            if (esNumeroValido(nota))
+            {
+
+                if (int.Parse(nota) > 0 && int.Parse(nota) <= 10)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -188,7 +188,7 @@ namespace UI.Web
 
             if (Validaciones.esCampoValido(txtCondicion.Text))
             {
-                if (Validaciones.esCampoValido(txtNota.Text))
+                if (Validaciones.esCampoValido(txtNota.Text) && Validaciones.esNumeroValido(txtNota.Text) && Validaciones.esNotaValida(txtNota.Text))
                 {
                     return true;
                 }
